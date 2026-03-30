@@ -1,5 +1,5 @@
 import functions as functions
-
+#import functions
 students = []
 
 def request_int(message):
@@ -16,7 +16,7 @@ def request_int(message):
 
 
 while True:
-
+    #Used while true to keep showing the menu
     print("\nMENU\n")
     print("1. Register a student.")
     print("2. Check student list.")
@@ -24,7 +24,7 @@ while True:
     print("4. Update student information.")
     print("5. Delete student.")
     print("0. Salir")
-
+    #error management
     try:
         op = int(input("Option: \n"))
     except ValueError:
@@ -83,6 +83,7 @@ while True:
             print("❌ Not found")
 
     elif op == 0:
+        #Leaves
         print("👋 Leaving...")
         break
 

@@ -17,6 +17,7 @@ def add_student(students, id, name, age, program, status):
     return True
 
 def look_students(students, id):
+    #Looks through the student's list and finds the correct student by ID
     for e in students:
             if e["id"] == id:
                 return e
@@ -24,6 +25,7 @@ def look_students(students, id):
 
 def update_student_list(students, id, new_id=None, new_age=None, new_program=None, new_status=None):
     student_update = look_students(students, id)
+    #Updates students information, and if theres not sends a message to the user 
     if student_update:
         if new_age is not None:
             student_update["age"] = new_age
@@ -37,6 +39,7 @@ def update_student_list(students, id, new_id=None, new_age=None, new_program=Non
     return False
 
 def delete_student(students, id):
+    #Deletes a specidif student by ID
     student_update = look_students(students, id)
     if student_update:
         students.remove(student_update)
